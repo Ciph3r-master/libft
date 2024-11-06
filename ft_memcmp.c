@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:35:41 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/04 17:40:39 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/05 11:38:34 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/05 19:14:34 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+/* int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
+	unsigned char c1;
+	unsigned char c2;
 
 	i = 0;
-	while (i < n)
+	c1 = *((unsigned char *)(s1));
+	c2 = *((unsigned char *)(s2));
+	while (i < n && (c1 == c2))
 	{
-		*((unsigned int *)(dest + i)) = *((unsigned int *)(src + i));
+		c1 = *((unsigned char *)(s1 + i));
+		c2 = *((unsigned char *)(s2 + i));
 		i++;
 	}
-	return (dest);
-}
+	return (c1 - c2);
+} */
 
-/* int	main(void)
+/* int	main(int ac, char **av)
 {
-	char	dest[10];
-	char	src[20] = "TEst World !";
-	printf("%s\n",ft_memcpy(dest, src, 17));
-	printf("%s\n",memcpy(dest, src, 17));
-	return (0);
+	printf("%d\n", ft_memcmp(av[1], av[2], atoi(av[3])));
+	printf("%d\n", memcmp(av[1], av[2], atoi(av[3])));
 } */

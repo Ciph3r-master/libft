@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:46:51 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/04 18:24:09 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/05 11:08:05 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/06 13:26:18 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	size_t	src_len;
 
-	src_len = ft_strlen(src);
 	i = 0;
-	while (src && src[i] && size > 0 && i < (size - 1))
+	while (i < n && (s1[i] || s2[i]))
 	{
-		dst[i] = src[i];
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	dst[i] = 0;
-	return (src_len);
-}
-/* int	main(void)
-{
-	char	dest[10];
-	char	src[10] = "Hello !";
-
-	printf("Size :%d\nCpy :%s\n", ft_strlcpy(dest, src, 5), dest);
-	printf("Size :%d\nCpy :%s\n", strlcpy(dest, src, 5), dest);
 	return (0);
+}
+
+/* int	main(int ac, char **av)
+{
+	printf("%d\n", ft_strncmp(av[1], av[2], atoi(av[3])));
+	printf("%d\n", strncmp(av[1], av[2], atoi(av[3])));
 } */

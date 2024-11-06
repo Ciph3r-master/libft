@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 17:15:44 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/04 17:40:39 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/04 15:31:02 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/06 13:51:37 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
-}
+	size_t	i;
 
-/* int	main(void)
-{
-	printf("%c\n", ft_tolower('a'));
-	printf("%c\n", ft_tolower('A'));
-	printf("%c\n", ft_tolower('5'));
-} */
+	i = 0;
+	while (i < n)
+	{
+		*((unsigned char *)(s + i)) = (unsigned char) '\0';
+		i++;
+	}
+}

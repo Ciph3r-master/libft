@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:31:02 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/04 17:40:39 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/04 14:02:35 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/05 19:14:34 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_isdigit(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		*((unsigned char *)(s + i)) = (unsigned char) '\0';
-		i++;
-	}
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
+/* int	main(void)
+{
+	printf("%d\n", ft_isalpha('A'));
+	printf("%d\n", ft_isalpha('Z'));
+	printf("%d\n", ft_isalpha('0'));
+} */

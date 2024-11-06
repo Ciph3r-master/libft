@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:16:17 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/04 17:40:39 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/04 15:46:51 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/05 20:41:49 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (c >= 32 && c < 127)
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	src_len;
+
+	src_len = ft_strlen(src);
+	i = 0;
+	if (size == 0)
+		return (src_len);
+	while (src && src[i] && i < (size - 1))
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = 0;
+	return (src_len);
 }
 /* int	main(void)
 {
-	printf("%d\n", ft_isprint(31));
-	printf("%d\n", ft_isprint(127));
-	printf("%d\n", ft_isprint('d'));
+	char	dest[10];
+	char	src[10] = "Hello !";
+
+	printf("Size :%d\nCpy :%s\n", ft_strlcpy(dest, src, 5), dest);
+	printf("Size :%d\nCpy :%s\n", strlcpy(dest, src, 5), dest);
 	return (0);
 } */
