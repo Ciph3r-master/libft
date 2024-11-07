@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 18:28:52 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/07 17:45:07 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/07 17:54:45 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/07 18:22:19 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	long int	nb;
 
-	i = 0;
-	while (s[i])
+	if (n < 0)
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)(s + i));
-		i++;
+		ft_putchar_fd('-', fd);
+		nb = (long int) n * -1;
 	}
-	if ((unsigned char)c == 0)
-		return ((char *)(s + i));
-	return (NULL);
+	else
+		nb = (long int) n;
+	if (nb >= 10)
+		ft_putnbr_fd(nb / 10, fd);
+	ft_putchar_fd((nb % 10) + '0', fd);
 }
-
-/* int	main(void)
+/* #include "fcntl.h"
+int	main(int ac, char **av)
 {
-	printf("%s\n", ft_strchr("Hello World", 'H' + 256));
-	printf("%s\n", strchr("Hello World", 'H' + 256));
+	ft_putnbr_fd(ft_atoi(av[1]), open(av[2], O_WRONLY));
 } */

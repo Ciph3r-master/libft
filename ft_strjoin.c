@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 18:28:52 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/07 17:45:07 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/06 17:52:24 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/06 19:27:23 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char	*join;
+	size_t	size;
 
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)(s + i));
-		i++;
-	}
-	if ((unsigned char)c == 0)
-		return ((char *)(s + i));
-	return (NULL);
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	join = malloc(sizeof(char) * size);
+	if (!s1 && !s2)
+		return (NULL);
+	if (!join)
+		return (NULL);
+	ft_memcpy(join, s1, ft_strlen(s1));
+	ft_memcpy(join + ft_strlen(s1), s2, ft_strlen(s2));
+	join[size - 1] = 0;
+	return (join);
 }
 
 /* int	main(void)
 {
-	printf("%s\n", ft_strchr("Hello World", 'H' + 256));
-	printf("%s\n", strchr("Hello World", 'H' + 256));
+	printf("'%s'\n", ft_strjoin("abcdefg", "hijklmnop"));
 } */
