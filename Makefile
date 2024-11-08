@@ -23,7 +23,7 @@ FLAGS= -Wall -Werror -Wextra
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
+${NAME}: ${OBJS} $(INCLUDES)
 	$(AR) $(NAME) $(OBJS)
 
 clean:
