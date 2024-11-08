@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:50:15 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/08 13:56:02 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:35:28 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ static void	ft_fillstr(char *s, int nb, int size)
 	}
 	else
 		n = (long int)nb;
-	s[size] = 0;
-	size--;
+	--size;
+	s[size--] = 0;
 	while (n / 10)
 	{
 		s[size] = n % 10 + '0';
@@ -69,7 +69,8 @@ char	*ft_itoa(int n)
 	return (s);
 }
 
-int	main(int ac, char **av)
+/* int	main(int ac, char **av)
 {
+	(void) ac;
 	printf("%s\n", ft_itoa(ft_atoi(av[1])));
-}
+} */
