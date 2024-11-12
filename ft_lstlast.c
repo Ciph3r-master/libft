@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:35:41 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 16:08:26 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/12 16:21:01 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/12 16:27:11 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
+	t_list	*current;
 
-	i = 0;
-	if (!dest && !src)
+	if (lst == NULL)
 		return (NULL);
-	while (i < n)
-	{
-		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
-		i++;
-	}
-	return (dest);
+	current = lst;
+	while (current->next)
+		current = current->next;
+	return (current);
 }
-
 /* int	main(void)
 {
-	char	dest[10];
-	char	src[20] = "TEst World !";
-	printf("%s\n",ft_memcpy(dest, src, 17));
-	printf("%s\n",memcpy(dest, src, 17));
-	return (0);
+	t_list	*list;
+	t_list	*last;
+
+	list = ft_lstnew("Hello world");
+	ft_lstadd_back(&list, ft_lstnew("Hello"));
+	ft_lstadd_back(&list, ft_lstnew("World"));
+	last = ft_lstlast(list);
+	printf("%s\n", (char *)last->content);
 } */

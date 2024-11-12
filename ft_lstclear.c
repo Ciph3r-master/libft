@@ -1,37 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:35:41 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 16:08:26 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/12 17:26:16 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/12 18:54:59 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	f(void *content)
 {
-	size_t	i;
+	ft_putendl_fd((char *)content, 1);
+}
 
-	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	while (i < n)
+void	ft_lstclear(t_list **lst, void (*del) (void *))
+{
+	t_list	*temp;
+
+	temp = *lst;
+	while (temp)
 	{
-		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
-		i++;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
-	return (dest);
 }
 
 /* int	main(void)
 {
-	char	dest[10];
-	char	src[20] = "TEst World !";
-	printf("%s\n",ft_memcpy(dest, src, 17));
-	printf("%s\n",memcpy(dest, src, 17));
-	return (0);
+	t_list	*list;
+	t_list	*last;
+
+	list = ft_lstnew("Hello world");
+	ft_lstadd_back(&list, ft_lstnew("Hello"));
+	ft_lstadd_back(&list, ft_lstnew("World"));
+	last = ft_lstlast(list);
+
+	ft_lstclear(&list, &f);
 } */

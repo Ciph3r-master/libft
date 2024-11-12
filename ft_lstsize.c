@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:22:00 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 16:23:40 by qutruche         ###   ########.fr       */
+/*   Created: 2024/11/12 15:55:10 by qutruche          #+#    #+#             */
+/*   Updated: 2024/11/12 16:01:17 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_lstsize(t_list *lst)
 {
-	int			i;
-	int			sign;
-	long		res;
+	int		i;
+	t_list	*current;
 
+	current = lst;
 	i = 0;
-	res = 0;
-	sign = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
-		sign = 1 - 2 * (nptr[i++] == '-');
-	while (ft_isdigit(nptr[i]))
+	while (current)
 	{
-		res *= 10;
-		res += nptr[i] - '0';
+		current = current->next;
 		i++;
 	}
-	return ((int)(res * sign));
+	return (i);
 }
 
-/* int	main(int ac, char **av)
+/* int		main(void)
 {
-	printf("%d\n", ft_atoi(av[1]));
-	printf("%d\n", atoi(av[1]));
-	return (0);
+	t_list	*list;
+
+	list = ft_lstnew("T");
+	ft_lstadd_back(&list, ft_lstnew("He"));
+	printf("%d\n", ft_lstsize(list));
 } */
