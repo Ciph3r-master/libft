@@ -16,12 +16,16 @@ INCLUDES= libft.h
 NAME= libft.a
 AR= ar -rcs
 CC= cc
+OBJ_DIR= objs
 BONUS_OBJS= $(BONUS_SRCS:.c=.o) 
-OBJS= $(SRCS:.c=.o) 
+OBJS= $(SRCS:.c=.o)
+BONUS_OBJS := $(addprefix $(OBJ_DIR)/, $(BONUS_OBJS))
+OBJS := $(addprefix $(OBJ_DIR)/, $(OBJS))
 RM= rm -f
 FLAGS= -Wall -Werror -Wextra
 
-%.o : %.c
+$(OBJ_DIR)/%.o : %.c
+	@mkdir -p $(OBJ_DIR)
 	$(CC) $(FLAGS) -c $< -o $@ -I $(INCLUDES)
 
 all: ${NAME}
@@ -29,16 +33,17 @@ all: ${NAME}
 ${NAME}: ${OBJS} $(INCLUDES)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(BONUS_OBJS) $(OBJS) $(INCLUDES)
+bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(NAME) $^
 
 clean:
 	$(RM) $(OBJS)
 	$(RM) $(BONUS_OBJS)
+	$(RM) -r $(OBJ_DIR)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
