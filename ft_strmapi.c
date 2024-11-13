@@ -6,18 +6,11 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:49:06 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/07 19:17:05 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:16:23 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* char	test(unsigned int i, char c)
-{
-	(void) i;
-	(void) c;
-	return ('5');
-} */
 
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
@@ -36,11 +29,3 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	res[i] = 0;
 	return (res);
 }
-/* int	main(void)
-{
-	printf("%s\n", ft_strmapi("abcd0", &test));
-	printf("%s\n", ft_strmapi("", &test));
-	printf("%s\n", ft_strmapi("abcd0", &test));
-	printf("%s\n", ft_strmapi("abcdfsdfs", &test));
-	printf("%s\n", ft_strmapi("abcd0", &test));
-} */

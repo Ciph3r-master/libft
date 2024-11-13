@@ -6,21 +6,11 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:57:29 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 19:59:51 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:14:25 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* void	del(void *content)
-{
-	ft_putendl_fd((char *)content, 1);
-	return ;
-}
-void	*test(void *content)
-{
-	return ("42");
-} */
 
 static t_list	*ft_new(void *content, void *(*f) (void *))
 {
@@ -58,15 +48,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *))
 	}
 	return (nlist);
 }
-/* int	main(void)
-{
-	t_list	*list;
-	t_list	*n_list;
-	list = ft_lstnew("Hello world");
-	ft_lstadd_back(&list, ft_lstnew("Hello"));
-	ft_lstadd_back(&list, ft_lstnew("World"));
-
-	n_list = ft_lstmap(list, &test, &del);
-	ft_lstiter(n_list, &del);
-
-} */

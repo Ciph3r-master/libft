@@ -36,7 +36,6 @@ $(NAME): $(OBJS)
 bonus: 
 	@$(MAKE) $(NAME) SRCS="$(SRCS) $(BONUS_SRCS)"
 
-
 clean:
 	$(RM) $(OBJS)
 	$(RM) $(BONUS_OBJS)

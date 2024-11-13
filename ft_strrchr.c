@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 19:34:57 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/06 16:42:18 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:16:38 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (NULL);
 }
-/* int	main(void)
-{
-	printf("%s\n", ft_strrchr("HELLO HELLO", 'H' + 256));
-	printf("%s\n", strrchr("HELLO HELLO", 'H' + 256));
-} */

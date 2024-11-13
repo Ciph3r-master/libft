@@ -6,12 +6,12 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:14:39 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/08 12:53:41 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:11:26 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// TODO : TEST
+
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	i;

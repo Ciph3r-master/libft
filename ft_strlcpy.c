@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:46:51 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/05 20:41:49 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:16:07 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = 0;
 	return (src_len);
 }
-/* int	main(void)
-{
-	char	dest[10];
-	char	src[10] = "Hello !";
-
-	printf("Size :%d\nCpy :%s\n", ft_strlcpy(dest, src, 5), dest);
-	printf("Size :%d\nCpy :%s\n", strlcpy(dest, src, 5), dest);
-	return (0);
-} */

@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:15:54 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/07 17:00:18 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:15:25 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,3 @@ char	**ft_split(char const *s, char c)
 	split[i] = NULL;
 	return (split);
 }
-
-/* int	main(int ac, char **av)
-{
- 	printf("%d\n",ft_countword("        Salut a tous          ", ' ')); 
-	ft_split(av[1], av[2][0]);
-} */

@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:02:35 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/05 19:14:34 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:11:47 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/* int	main(void)
-{
-	printf("%d\n", ft_isalpha('A'));
-	printf("%d\n", ft_isalpha('Z'));
-	printf("%d\n", ft_isalpha('0'));
-} */

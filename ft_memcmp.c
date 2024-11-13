@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:38:34 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 16:04:50 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:14:49 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/* int	main(int ac, char **av)
-{
-	printf("%d\n", ft_memcmp(av[1], av[2], atoi(av[3])));
-	printf("%d\n", memcmp(av[1], av[2], atoi(av[3])));
-} */

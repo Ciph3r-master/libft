@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:55:10 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 16:01:17 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:14:36 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
-/* int		main(void)
-{
-	t_list	*list;
-
-	list = ft_lstnew("T");
-	ft_lstadd_back(&list, ft_lstnew("He"));
-	printf("%d\n", ft_lstsize(list));
-} */

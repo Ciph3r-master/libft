@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:52:24 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/06 19:27:23 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:15:53 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[size - 1] = 0;
 	return (join);
 }
-
-/* int	main(void)
-{
-	printf("'%s'\n", ft_strjoin("abcdefg", "hijklmnop"));
-} */

@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:23:42 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 20:03:29 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:15:59 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dest_len + i] = 0;
 	return (dest_len + src_len);
 }
-
-/*
-int	main(void)
-{
-	char	src[30] = "World";
-	char	dest[30] = "Hello";
-
-	int	l = ft_strlcat(dest,src,15);
-	printf("%d %s \n", l, dest);
-}
-*/

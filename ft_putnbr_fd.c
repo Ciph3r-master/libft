@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:54:45 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/07 18:22:19 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:15:14 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nb / 10, fd);
 	ft_putchar_fd((nb % 10) + '0', fd);
 }
-/* #include "fcntl.h"
-int	main(int ac, char **av)
-{
-	ft_putnbr_fd(ft_atoi(av[1]), open(av[2], O_WRONLY));
-} */

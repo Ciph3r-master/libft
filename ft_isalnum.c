@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:05:25 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/05 19:14:34 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:11:31 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/* int	main(void)
-{
-	printf("%d\n", ft_isalnum('A'));
-	printf("%d\n", ft_isalnum('Z'));
-	printf("%d\n", ft_isalnum('5'));
-	printf("%d\n", ft_isalnum(')'));
-} */

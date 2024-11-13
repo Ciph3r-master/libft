@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:43:22 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 16:05:52 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:17:13 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/* #include <string.h>
-int	main(void)
-{
-	printf("%s\n", ft_strnstr("Hello world terdsrs", "world", 11));
-	printf("%s\n", strnstr("Hello world terdsrs", "world", 11));
-
-} */

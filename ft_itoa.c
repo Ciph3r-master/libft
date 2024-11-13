@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:50:15 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/08 17:35:28 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:13:50 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,3 @@ char	*ft_itoa(int n)
 	ft_fillstr(s, n, size);
 	return (s);
 }
-
-/* int	main(int ac, char **av)
-{
-	(void) ac;
-	printf("%s\n", ft_itoa(ft_atoi(av[1])));
-} */

@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:09:13 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 14:52:27 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:14:30 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ t_list	*ft_lstnew(void *content)
 	list->content = content;
 	return (list);
 }
-/* int	main(void)
-{
-	t_list	*list;
-
-	list = ft_lstnew("Hello world");
-	printf("%s\n", (char *)list->content);
-} */

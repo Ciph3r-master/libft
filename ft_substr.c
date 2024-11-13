@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:44:55 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/07 15:32:48 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:16:49 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(sub, &s[start], len + 1);
 	return (sub);
 }
-
-/* int	main(void)
-{
-	printf("%s\n", ft_substr("Hello world", 5, 10));
-} */
