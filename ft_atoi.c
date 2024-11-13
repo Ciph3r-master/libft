@@ -6,12 +6,11 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:22:00 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 22:26:56 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:42:21 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <errno.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -28,16 +27,15 @@ int	ft_atoi(const char *nptr)
 		sign = 1 - 2 * (nptr[i++] == '-');
 	while (ft_isdigit(nptr[i]))
 	{
+		res *= 10;
+		res += nptr[i++] - '0';
 		if (res > 9223372036854775807)
 		{
-			errno = ERANGE;
 			if (sign == 1)
 				return (-1);
 			else
 				return (0);
 		}
-		res *= 10;
-		res += nptr[i++] - '0';
 	}
 	return ((int)(res * sign));
 }
