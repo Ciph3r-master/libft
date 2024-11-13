@@ -24,17 +24,18 @@ OBJS := $(addprefix $(OBJ_DIR)/, $(OBJS))
 RM= rm -f
 FLAGS= -Wall -Werror -Wextra
 
-$(OBJ_DIR)/%.o : %.c
+$(OBJ_DIR)/%.o : %.c $(INCLUDES) Makefile
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(FLAGS) -c $< -o $@ -I $(INCLUDES)
 
-all: ${NAME}
+all: $(NAME) Makefile
 
-${NAME}: ${OBJS} $(INCLUDES)
+$(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	$(AR) $(NAME) $^
+bonus: 
+	@$(MAKE) $(NAME) SRCS="$(SRCS) $(BONUS_SRCS)"
+
 
 clean:
 	$(RM) $(OBJS)
