@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:05:51 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/12 17:18:24 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:07:27 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del) (void *))
 {
-	if (!lst || !del)
+	if (!lst)
 		return ;
-	del(lst->content);
+	if (del)
+		del(lst->content);
 	free(lst);
 }
