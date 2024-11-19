@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:15:54 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/13 14:15:25 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:46:41 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char	*ft_strndup(const char *src, int size)
 		return (NULL);
 	i = 0;
 	dup = (char *) malloc(sizeof(char) * size + 1);
-	if (dup == NULL)
+	if (!dup)
 		return (NULL);
 	while (src[i] && i < size)
 	{
