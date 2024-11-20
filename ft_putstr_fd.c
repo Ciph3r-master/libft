@@ -6,7 +6,7 @@
 /*   By: qutruche <qutruche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:52:26 by qutruche          #+#    #+#             */
-/*   Updated: 2024/11/07 18:11:58 by qutruche         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:04:45 by qutruche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = -1;
-	while (s[++i])
-		write(fd, &s[i], 1);
+	if (s)
+		write(1, s, ft_strlen(s));
 }
