@@ -27,7 +27,7 @@ FLAGS= -Wall -Werror -Wextra
 
 $(OBJ_DIR)/%.o : %.c $(INCLUDES) Makefile
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(FLAGS) -c $< -o $@ -I $(INCLUDES)
+	$(CC) $(FLAGS) -c $< -o $@ -I.
 
 all: $(NAME) Makefile
 
